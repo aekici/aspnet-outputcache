@@ -1,0 +1,12 @@
+C:\Users\aekici\Documents\GitHub\aspnet-redis-outputcache\Hepsiburada.Caching.Output\Hepsiburada.Caching.Output\bin\Release\AspNet.Caching.Output.dll
+C:\Users\aekici\Documents\GitHub\aspnet-redis-outputcache\Hepsiburada.Caching.Output\Hepsiburada.Caching.Output\bin\Release\AspNet.Caching.Output.pdb
+C:\Users\aekici\Documents\GitHub\aspnet-redis-outputcache\Hepsiburada.Caching.Output\Hepsiburada.Caching.Output\bin\Release\BookSleeve.dll
+C:\Users\aekici\Documents\GitHub\aspnet-redis-outputcache\Hepsiburada.Caching.Output\Hepsiburada.Caching.Output\bin\Release\protobuf-net.dll
+C:\Users\aekici\Documents\GitHub\aspnet-redis-outputcache\Hepsiburada.Caching.Output\Hepsiburada.Caching.Output\bin\Release\ServiceStack.Text.dll
+C:\Users\aekici\Documents\GitHub\aspnet-redis-outputcache\Hepsiburada.Caching.Output\Hepsiburada.Caching.Output\bin\Release\BookSleeve.pdb
+C:\Users\aekici\Documents\GitHub\aspnet-redis-outputcache\Hepsiburada.Caching.Output\Hepsiburada.Caching.Output\bin\Release\BookSleeve.xml
+C:\Users\aekici\Documents\GitHub\aspnet-redis-outputcache\Hepsiburada.Caching.Output\Hepsiburada.Caching.Output\bin\Release\protobuf-net.pdb
+C:\Users\aekici\Documents\GitHub\aspnet-redis-outputcache\Hepsiburada.Caching.Output\Hepsiburada.Caching.Output\bin\Release\protobuf-net.xml
+C:\Users\aekici\Documents\GitHub\aspnet-redis-outputcache\Hepsiburada.Caching.Output\Hepsiburada.Caching.Output\bin\Release\ServiceStack.Text.xml
+C:\Users\aekici\Documents\GitHub\aspnet-redis-outputcache\Hepsiburada.Caching.Output\Hepsiburada.Caching.Output\obj\Release\AspNet.Caching.Output.dll
+C:\Users\aekici\Documents\GitHub\aspnet-redis-outputcache\Hepsiburada.Caching.Output\Hepsiburada.Caching.Output\obj\Release\AspNet.Caching.Output.pdb
