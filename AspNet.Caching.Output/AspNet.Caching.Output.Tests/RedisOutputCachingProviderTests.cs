@@ -130,7 +130,7 @@ namespace AspNet.Caching.Output.Tests
             item.Should().BeNull();
         }
     }
-
+    [Serializable]
     public class CachedItem
     {
         private object obj = new System.Web.Caching.HeaderElement("ohannes", "burger");
