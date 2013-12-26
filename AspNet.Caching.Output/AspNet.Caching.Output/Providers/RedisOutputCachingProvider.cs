@@ -8,25 +8,21 @@ protobuf-net is entirely Stream-based, hence the need for MemoryStream to sit on
  */
 
 using System;
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Caching;
 
 using AspNet.Caching.Output.Connection;
 using AspNet.Caching.Output.Model;
-
+using AspNet.Caching.Output.Serializers;
 using BookSleeve;
-
-//using ProtoBuf;
-
 
 namespace AspNet.Caching.Output.Providers
 {
     public class RedisOutputCachingProvider : OutputCacheProvider
     {
         private RedisConnectionManager redisConnectionManager;
+        private ISerializer<CacheItem> serializer;
         private string host = "localhost";
         private int port = 6379;
 
@@ -39,6 +35,7 @@ namespace AspNet.Caching.Output.Providers
                 port = Convert.ToInt32(config["port"]);
 
             redisConnectionManager = new RedisConnectionManager(host, port);
+            serializer = new BinarySerializer<CacheItem>();
 
             base.Initialize(name, config);
         }
@@ -56,11 +53,7 @@ namespace AspNet.Caching.Output.Providers
             if (value == null)
                 return null;
 
-            // var cacheItem = Serializer.Deserialize<CacheItem>(new MemoryStream(value));
-            
-            var cacheItem = (CacheItem) new BinaryFormatter().Deserialize(new MemoryStream(value));
-
-            //var cacheItem = (CacheItem) ServiceStack.Text.JsonSerializer.DeserializeFromStream(typeof(CacheItem), new MemoryStream(value));
+            var cacheItem = serializer.Deserialize(value);
 
             return cacheItem == null ? null : cacheItem.Data;
 
@@ -74,19 +67,8 @@ namespace AspNet.Caching.Output.Providers
 
         public override void Set(string key, object entry, DateTime utcExpiry)
         {
-            byte[] raw;
-            using (var ms = new MemoryStream())
-            {
-                var cacheItem = new CacheItem { Key = key, Data = entry, Expiry = utcExpiry };
-
-                // ProtoBuf.Serializer.Serialize(ms, new CacheItem { Key = key, Data = entry, Expiry = utcExpiry });
-                
-                new BinaryFormatter().Serialize(ms, cacheItem);
-
-                // ServiceStack.Text.JsonSerializer.SerializeToStream(cacheItem, typeof(CacheItem), ms);
-
-                raw = ms.ToArray();
-            }
+            var cacheItem = new CacheItem { Key = key, Data = entry, Expiry = utcExpiry };
+            byte[] raw = serializer.Serialize(cacheItem);
 
             RedisConnection redisConnection = redisConnectionManager.GetConnection();
             //TODO: discuss if acquire remote lock here is really required or not
