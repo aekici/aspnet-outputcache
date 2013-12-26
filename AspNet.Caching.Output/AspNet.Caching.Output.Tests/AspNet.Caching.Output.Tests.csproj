@@ -66,7 +66,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Hepsiburada.Caching.Output\AspNet.Caching.Output.csproj">
+    <ProjectReference Include="..\AspNet.Caching.Output\AspNet.Caching.Output.csproj">
       <Project>{410b7270-7f4f-40dd-886e-2055c5e265cd}</Project>
       <Name>AspNet.Caching.Output</Name>
     </ProjectReference>

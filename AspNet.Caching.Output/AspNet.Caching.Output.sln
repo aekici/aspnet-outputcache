@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Caching.Output", "Hepsiburada.Caching.Output\AspNet.Caching.Output.csproj", "{410B7270-7F4F-40DD-886E-2055C5E265CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Caching.Output", "AspNet.Caching.Output\AspNet.Caching.Output.csproj", "{410B7270-7F4F-40DD-886E-2055C5E265CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Caching.Output.Tests", "Hepsiburada.Caching.Output.Tests\AspNet.Caching.Output.Tests.csproj", "{745CA06F-9F71-4E56-B69C-7780DD5B6351}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Caching.Output.Tests", "AspNet.Caching.Output.Tests\AspNet.Caching.Output.Tests.csproj", "{745CA06F-9F71-4E56-B69C-7780DD5B6351}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{F1D67326-C22E-438D-8053-6290B7002433}"
 	ProjectSection(SolutionItems) = preProject
