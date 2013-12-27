@@ -1,5 +1,7 @@
 ﻿/* 
  One note: the connection is thread safe and intended to be massively shared; don't do a connection per operation ( from Marc Gravell, author of protobuf-net )
+ * 
+ * https://gist.github.com/jalaziz/6769315
  */
 
 using System;
