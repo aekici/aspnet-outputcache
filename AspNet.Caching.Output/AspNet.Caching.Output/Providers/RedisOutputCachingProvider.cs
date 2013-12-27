@@ -79,9 +79,9 @@ namespace AspNet.Caching.Output.Providers
                 bool lockTaken = redisConnection.Wait(lockTakenTask);
                 if (lockTaken)
                 {
-                    redisConnection.Strings.Set(1, key, raw);
-                    redisConnection.Strings.ReleaseLock(1, "lock:" + key);
-                    redisConnection.WaitAll();
+                    Task setTask = redisConnection.Strings.Set(1, key, raw);
+                    Task releaseLockTask = redisConnection.Strings.ReleaseLock(1, "lock:" + key);
+                    redisConnection.WaitAll(new[] { setTask, releaseLockTask });
                     break;
                 }
 

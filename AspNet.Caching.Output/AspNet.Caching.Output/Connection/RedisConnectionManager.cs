@@ -44,7 +44,11 @@ namespace AspNet.Caching.Output.Connection
                 {
                     if (this.connection == null)
                     {
-                        this.connection = new RedisConnection(Host, Port, IOTimeout, Password, MaxUnsent, AllowAdmin, SyncTimeout);
+                        this.connection = new RedisConnection(Host, Port, IOTimeout, Password, MaxUnsent, AllowAdmin, SyncTimeout)
+                            {
+                                IncludeDetailInTimeouts = true
+                            };
+
                         this.connection.Shutdown += ConnectionOnShutdown;
                         var openTask = this.connection.Open();
 
