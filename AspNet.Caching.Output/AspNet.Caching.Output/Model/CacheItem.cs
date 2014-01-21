@@ -14,6 +14,8 @@ namespace AspNet.Caching.Output.Model
         public object  Data { get; set; }
 
         //
+
+
         //berkay git test aasdasd
         [ProtoMember(3)]
         public DateTime Expiry { get; set; }
