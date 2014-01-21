@@ -13,6 +13,7 @@ namespace AspNet.Caching.Output.Model
         [ProtoMember(2, DynamicType = true)]
         public object  Data { get; set; }
 
+
         [ProtoMember(3)]
         public DateTime Expiry { get; set; }
     }
